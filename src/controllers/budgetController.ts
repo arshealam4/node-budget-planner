@@ -16,6 +16,8 @@ class budgetController {
     const purpose = req.body.purpose;
     const description = req.body.description;
 
+    console.log("date", date);
+
     // if data is invalid
     if (!amount || !date) {
       return responseHandler.makeResponse(
