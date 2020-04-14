@@ -219,8 +219,8 @@ class budgetController {
       const record = await budgetModel
         .find({
           date: {
-            $gt: startDate,
-            $lt: endDate,
+            $gte: startDate,
+            $lte: endDate,
           },
         })
         .skip(skip)
@@ -234,8 +234,8 @@ class budgetController {
         // get current month(start to end) records
         const record = await budgetModel.find({
           date: {
-            $gt: startDate,
-            $lt: endDate,
+            $gte: startDate,
+            $lte: endDate,
           },
         });
         const result = this.getTotal(record);
