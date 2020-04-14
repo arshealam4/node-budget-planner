@@ -12,7 +12,7 @@ class budgetController {
   public add = async (req, res, next) => {
     const amount = req.body.amount;
     const type = req.body.type;
-    const date = moment(req.body.date); // convert date format using moment
+    const date = moment(req.body.date).format("YYYY-MM-DD"); // convert date format using moment
     const purpose = req.body.purpose;
     const description = req.body.description;
 
